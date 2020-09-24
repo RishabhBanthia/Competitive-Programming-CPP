@@ -6,13 +6,16 @@
 #include <cmath>
 using namespace std;
 
-class Server {
+class Server 
+{
 private:
 	static int load;
 public:
-	static int compute(long long A, long long B) {
+	static int compute(long long A, long long B) 
+	{
 		load += 1;
-		if(A < 0) {
+		if(A < 0) 
+		{
 			throw std::invalid_argument("A is negative");
 		}
 		vector<int> v(A, 0);
@@ -22,19 +25,21 @@ public:
 		int ans = v.at(B);
 		return real + A - B*ans;
 	}
-	static int getLoad() {
+	static int getLoad() 
+	{
 		return load;
 	}
 };
 int Server::load = 0;
 
-int main() {
+int main() 
+{
 	int T; cin >> T;
-	while(T--) {
+	while(T--) 
+	{
 		long long A, B;
 		cin >> A >> B;
 
-		/* Enter your code here. */
         try 
         {
             cout << Server::compute(A, B) << endl;
