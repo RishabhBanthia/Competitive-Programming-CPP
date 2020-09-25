@@ -7,7 +7,8 @@
 #include <cassert>
 using namespace std;
 
-struct Node{
+struct Node
+{
    Node* next;
    Node* prev;
    int value;
@@ -16,7 +17,8 @@ struct Node{
    Node(int k, int val):prev(NULL),next(NULL),key(k),value(val){};
 };
 
-class Cache{
+class Cache
+{
    
    protected: 
    map<int,Node*> mp; //map the key to the node in the linked list
@@ -29,24 +31,32 @@ class Cache{
 };
 
 #include <deque>
-class LRUCache : public Cache {
+class LRUCache : public Cache 
+{
     public:
         deque<pair<int, int> > v;
-        LRUCache(const int &x) {
+        LRUCache(const int &x) 
+        {
             cp = x;
         }
-        int get(int key) {
-            for (int i = 0; i < v.size(); i ++) {
-                if (v[i].first == key) {
+        int get(int key) 
+        {
+            for (int i = 0; i < v.size(); i ++) 
+            {
+                if (v[i].first == key) 
+                {
                     return v[i].second;
                 }
             }
             return -1;
         }
-        void set(int key, int value) {
+        void set(int key, int value) 
+        {
             int i = 0;
-            for (; i < v.size(); i ++) {
-                if (v[i].first == key) {
+            for (; i < v.size(); i ++) 
+            {
+                if (v[i].first == key) 
+                {
                     v.erase(v.begin() + i);
                     break;
                 }
@@ -59,19 +69,23 @@ class LRUCache : public Cache {
         }
 };
 
-int main() {
+int main() 
+{
    int n, capacity,i;
    cin >> n >> capacity;
    LRUCache l(capacity);
-   for(i=0;i<n;i++) {
+   for(i=0;i<n;i++) 
+   {
       string command;
       cin >> command;
-      if(command == "get") {
+      if(command == "get") 
+      {
          int key;
          cin >> key;
          cout << l.get(key) << endl;
       } 
-      else if(command == "set") {
+      else if(command == "set") 
+      {
          int key, value;
          cin >> key >> value;
          l.set(key,value);
