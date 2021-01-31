@@ -14,7 +14,6 @@ int main()
     vector<string> hrml;
     vector<string> quer;
     cin.ignore();
-
     for(i=0;i<n;i++)
     {
         getline(cin,temp);
@@ -25,16 +24,13 @@ int main()
         getline(cin,temp);
         quer.push_back(temp);
     }
-
     map<string, string> m;
     vector<string> tag;
-
     for(i=0;i<n;i++)
     {
         temp=hrml[i];
         temp.erase(remove(temp.begin(), temp.end(), '\"' ),temp.end());
         temp.erase(remove(temp.begin(), temp.end(), '>' ),temp.end());
-
         if(temp.substr(0,2)=="</")
         {
             tag.pop_back();
@@ -65,9 +61,7 @@ int main()
                 m[*tag.rbegin()+"~"+p1]=v1;
             }
         }
-
     }
-
     for(i=0;i<q;i++)
     {
         if (m.find(quer[i]) == m.end())
