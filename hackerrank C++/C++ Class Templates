@@ -6,10 +6,9 @@
 #include <cassert>
 using namespace std;
 
-
-
 template <class T>
-class AddElements {
+class AddElements 
+{
     T element;
   public:
     AddElements (T arg) {element=arg;}
@@ -28,8 +27,6 @@ class AddElements <string> {
       return s;
     }
 };
-
-
 int main () {
   int n,i;
   cin >> n;
