@@ -28,7 +28,8 @@ class Student
         return counter;
     }
 };
-int main() {
+int main() 
+{
     int n; // number of students
     cin >> n;
     Student *s = new Student[n]; // an array of n students
@@ -36,7 +37,6 @@ int main() {
     for(int i = 0; i < n; i++){
         s[i].input();
     }
-
     // calculate kristen's score
     int kristen_score = s[0].calculateTotalScore();
 
@@ -48,7 +48,6 @@ int main() {
             count++;
         }
     }
-
     // print result
     cout << count;
     
