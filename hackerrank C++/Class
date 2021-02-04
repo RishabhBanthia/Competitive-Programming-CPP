@@ -18,7 +18,6 @@ class Student
         {
             return age;
         }
-
         void set_first_name(string fn) 
         {
             first_name = fn;
@@ -27,7 +26,6 @@ class Student
         {
             return first_name;
         }
-
         void set_last_name(string ln) 
         {
             last_name = ln;
@@ -36,7 +34,6 @@ class Student
         {
             return last_name;
         }
-
         void set_standard(int s) 
         {
             standard = s;
@@ -45,7 +42,6 @@ class Student
         {
             return standard;
         }
-
         string to_string() 
         {
             stringstream ss;
