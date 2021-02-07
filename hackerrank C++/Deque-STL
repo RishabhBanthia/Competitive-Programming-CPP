@@ -4,8 +4,6 @@ using namespace std;
 
 void printKMax(int arr[], int n, int k)
 {
-    //Write your code here.
-    /* Deque-STL in C++ - Hacker Rank Solution START */
     deque<int> Qi(k);
     int i;
     for (i = 0; i < k; i++) 
@@ -14,7 +12,8 @@ void printKMax(int arr[], int n, int k)
             Qi.pop_back();
         Qi.push_back(i);
     }
-    for ( ; i < n; i++) {
+    for ( ; i < n; i++) 
+    {
         cout << arr[Qi.front()] << " ";
         while ((!Qi.empty()) && (Qi.front() <= i - k))
             Qi.pop_front();
@@ -23,7 +22,6 @@ void printKMax(int arr[], int n, int k)
         Qi.push_back(i);
     }
     cout << arr[Qi.front()] << endl;
-    /* Deque-STL in C++ - Hacker Rank Solution END */
 }
 
 int main()
