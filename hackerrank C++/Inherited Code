@@ -13,8 +13,6 @@ struct BadLengthException : exception
     return s.c_str();
   }
 };
-
-
 bool checkUsername(string username) 
 {
 	bool isValid = true;
@@ -32,7 +30,6 @@ bool checkUsername(string username)
 	}
 	return isValid;
 }
-
 int main() 
 {
 	int T; cin >> T;
