@@ -54,33 +54,23 @@ class Student : public Person
       id2++;
    }
 };
-
 int Student::id2=1;
-
 int main()
 {
-
     int n, val;
     cin>>n; 
     Person *per[n];
-
     for(int i = 0;i < n;i++)
     {
-
         cin>>val;
         if(val == 1)
         {
-           
             per[i] = new Professor;
-
         }
         else per[i] = new Student; 
         per[i]->getdata(); 
     }
-
     for(int i=0;i<n;i++)
         per[i]->putdata(); 
-
     return 0;
-
 }
