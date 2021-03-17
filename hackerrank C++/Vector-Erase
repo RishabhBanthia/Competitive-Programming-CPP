@@ -12,9 +12,9 @@ int main()
     vector<int> a;
     for(i=0;i<n;i++)
         {
-        int x;
-        cin>>x;
-        a.push_back(x);
+           int x;
+           cin>>x;
+           a.push_back(x);
         }
     cin>>b>>c>>d;
     a.erase(a.begin()+b-1);
@@ -22,6 +22,8 @@ int main()
     size=a.size();
     cout<<size<<endl;
     for(i=0;i<size;i++)
-        cout<<a[i]<<" ";  
+    {
+        cout<<a[i]<<" ";
+    }
     return 0;
 }
